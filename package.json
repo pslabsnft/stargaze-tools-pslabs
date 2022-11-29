@@ -47,7 +47,8 @@
     "floor": "ts-node marketplace/floor-price.ts",
     "sweep": "ts-node marketplace/floor-sweeper.ts",
 
-    "upload-minter": "ts-node devops/upload-minter.ts",
+    "upload-factory-minter": "ts-node devops/upload-factory-minter.ts",
+    "init-factory": "ts-node devops/init-factory.ts",
     "set-new-uri": "ts-node scripts/set-new-uri.ts"
   }
 }

@@ -1,0 +1,48 @@
+{
+  "params": {
+    "code_id": 275,
+    "creation_fee": { "denom": "ustars", "amount": "1000000000" },
+    "min_mint_price": { "denom": "ustars", "amount": "50000000" },
+    "mint_fee_bps": 1000,
+    "max_trading_offset_secs": 1209600,
+    "extension": {
+      "max_token_limit": 10000,
+      "max_per_address_limit": 50,
+      "airdrop_mint_price": { "denom": "ustars", "amount": "0" },
+      "airdrop_mint_fee_bps": 0,
+      "shuffle_fee": { "denom": "ustars", "amount": "100000000" }
+    }
+  }
+}
+
+{
+  "create_minter": {
+    "init_msg": {
+      "base_token_uri": "ipfs://bafybeiaq3soaeiele2zx3n2qomksia352pooa5wbk5scnczzvucaqbad7m/galaxy4phyYu",
+      "start_time": "1669701600000000000",
+      "num_tokens": 1000,
+      "mint_price": {
+        "amount": "NaN",
+        "denom": "ustars"
+      },
+      "per_address_limit": 20,
+      "whitelist": "stars1u04rcxlfsupvuc78mzk5cfql0upjjqa3l8vmwwsnymusjklp2pns75x75e"
+    },
+    "collection_params": {
+      "code_id": 274,
+      "name": "AquaNauts",
+      "symbol": "AQUA",
+      "info": {
+        "creator": "stars12v06zrrhw0vs83t83svsddgl4ndfmk9cny2wu3",
+        "description": "NFTs packed with value and utility that make a real difference in the world",
+        "image": "https://bafybeigclyfgaysx73ch43hvqfdx6jt26saocpf4gggd3dyblh3pixtlda.ipfs.nftstorage.link/",
+        "explicit_content": false,
+        "royalty_info": {
+          "payment_address": "stars1uyjwsywch5h6x9pwrakj46y6fcr3a9w66mkn90",
+          "share": "0.1"
+        },
+        "start_trading_time": null
+      }
+    }
+  }
+}

@@ -4,7 +4,6 @@ import { getClient } from '../src/client';
 import { readFileSync } from 'fs';
 
 async function upload(contractPath: string) {
-  console.log("uploading wasm")
   const client = await getClient();
   const wasm = readFileSync(contractPath);
   try {
@@ -17,4 +16,11 @@ async function upload(contractPath: string) {
   }
 }
 
-upload('./wasm/minter.wasm');
+async function uploadContracts() {
+  console.log("uploading factory wasm");
+  await upload('./wasm/vending_factory.wasm');
+  
+  console.log("uploading minter wasm");
+  await upload('./wasm/vending_minter.wasm');
+}
+uploadContracts();
