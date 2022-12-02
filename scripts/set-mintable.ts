@@ -2,14 +2,14 @@ import { getClient } from '../src/client';
 
 const config = require('../config');
 
-export async function setNewUri(uri: string, numTokens: string) {
+export async function setMintable(mintable: string) {
   const client = await getClient();
 
   console.log('Minter contract: ', config.minter);
-  console.log('New base URI: ', uri);
-  console.log("num tokens: ", numTokens);
+  console.log('Mintable: ', mintable);
 
-  const msg = { set_token_uri: { uri, num_tokens: parseInt(numTokens) } };
+  let can_mint = mintable.toLowerCase() == "true"? true: false;
+  const msg = { set_mintable: { can_mint } };
   console.log(JSON.stringify(msg, null, 2));
 
   const result = await client.execute(
@@ -17,7 +17,7 @@ export async function setNewUri(uri: string, numTokens: string) {
     config.minter,
     msg,
     'auto',
-    'mint to'
+    'set mintable'
   );
   const wasmEvent = result.logs[0].events.find((e) => e.type === 'wasm');
   console.info(
@@ -29,12 +29,13 @@ export async function setNewUri(uri: string, numTokens: string) {
   }
 }
 
+console.log(process.argv)
 const args = process.argv.slice(2);
-
-if (args.length < 4) {
-  console.log('No arguments provided, need --uri and --num_tokens');
-} else if (args.length == 4 && args[0] == '--uri' && args[2] == "--num-tokens") {
-  setNewUri(args[1], args[3]);
+console.log(args)
+if (args.length < 2) {
+  console.log('No arguments provided, need --can-mint');
+} else if (args.length == 2 && args[0] == '--can-mint') {
+  setMintable(args[1]);
 } else {
   console.log('Invalid arguments');
 }

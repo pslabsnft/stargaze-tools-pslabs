@@ -81,24 +81,24 @@ module.exports = {
   // The date when the sale goes live
   // If whitelist is enabled, only whitelisted addresses will be able to purchase
   // startTime in ISO format
-  startTime: '2022-11-30T06:00:00.000Z',
+  startTime: '2022-12-03T06:00:00.000Z',
   // The minter contract address
   // Get this after running `yarn minter`
-  minter: 'stars1wpjzt0kdw2rkmca282e6a2nz5jdwukcrt6p9myaa75g37cev930qf2lapc',
+  minter: 'stars1lev4qkwml9347elh2g2vm509cvrj5h78x4ly7sfr9wy0674vx9vqf3kx85',
   // SG721 contract address
   // Get this after running `yarn minter`
-  sg721: 'stars1kmlfx4gs2k72kck7yg54udw2l550j0penfsjhp535kpk7ta8ndqqhzf7z3',
+  sg721: 'stars1rw9csxx0gdke9vs3vfrax3mwuc0ak2hjqkc3znpp4raxwjusrpksavkmvk',
 
   //// CONTRACT CODE IDs: Double Double Testnet ////
   // The code ID for sg721_base
   sg721BaseCodeId: 274,
   // The code ID for vending_minter
-  vendingMinterCodeId: 573,
+  vendingMinterCodeId: 603,
   // The code ID for vending_factory contract
-  vendingFactoryCodeId: 572,
+  vendingFactoryCodeId: 602,
   // Addr for vending factory contract
   vendingFactory:
-    'stars1ue6ld376p9tzkj4qg4x6s0qwtkf0rapqfsknmhtvre0autxkhzmq4crj55',
+    'stars1yvfjyq07hn92dufqlzcu4yz92gdyww7zr8pr2kr3wfgrcc97nqpseyhyue',
   // The code ID for the whitelist contract
   whitelistCodeId: 277,
   // marketplace:
