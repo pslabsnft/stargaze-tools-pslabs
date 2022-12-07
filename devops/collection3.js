@@ -21,7 +21,7 @@ module.exports = {
   numTokens: 50,
   mintPrice: 162,
   perAddressLimit: 5,
-  vendingFactory:
+  pslabFactory:
     'stars1nelx34qg6xtm5u748jzjsahthddsktrrg5dw2rx8vzpc8hwwgk5q32mj2h',
   sg721BaseCodeId: 151,
 };

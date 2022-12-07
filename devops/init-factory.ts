@@ -6,23 +6,22 @@ async function init() {
   try {
     const msg = {
       params: {
-        code_id: config.vendingMinterCodeId,
+        code_id: config.pslabMinterCodeId,
         creation_fee: { denom: 'ustars', amount: '1000000000' },
         min_mint_price: { denom: 'ustars', amount: '50000000' },
         mint_fee_bps: 1000,
         max_trading_offset_secs: 1209600,
         extension: {
-          max_token_limit: 10000,
+          max_token_limit: 100000,
           max_per_address_limit: 50,
           airdrop_mint_price: { denom: 'ustars', amount: '0' },
           airdrop_mint_fee_bps: 0,
-          shuffle_fee: { denom: 'ustars', amount: '100000000' },
         },
       },
     };
     const result = await client.instantiate(
       config.account,
-      config.vendingFactoryCodeId,
+      config.pslabFactoryCodeId,
       msg,
       'factory init',
       'auto'

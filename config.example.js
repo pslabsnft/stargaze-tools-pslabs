@@ -95,9 +95,9 @@ module.exports = {
   // The code ID for vending_minter
   vendingMinterCodeId: 603,
   // The code ID for vending_factory contract
-  vendingFactoryCodeId: 602,
+  pslabFactoryCodeId: 602,
   // Addr for vending factory contract
-  vendingFactory:
+  pslabFactory:
     'stars1yvfjyq07hn92dufqlzcu4yz92gdyww7zr8pr2kr3wfgrcc97nqpseyhyue',
   // The code ID for the whitelist contract
   whitelistCodeId: 277,

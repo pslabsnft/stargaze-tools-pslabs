@@ -2,14 +2,14 @@ import { getClient } from '../src/client';
 
 const config = require('../config');
 
-export async function setMintable(mintable: string) {
+export async function setPause(pause: string) {
   const client = await getClient();
 
   console.log('Minter contract: ', config.minter);
-  console.log('Mintable: ', mintable);
+  console.log('Pause: ', pause);
 
-  let can_mint = mintable.toLowerCase() == "true"? true: false;
-  const msg = { set_mintable: { can_mint } };
+  let minting_pause = pause.toLowerCase() == "true"? true: false;
+  const msg = { set_minting_pause: { pause: minting_pause } };
   console.log(JSON.stringify(msg, null, 2));
 
   const result = await client.execute(
@@ -17,7 +17,7 @@ export async function setMintable(mintable: string) {
     config.minter,
     msg,
     'auto',
-    'set mintable'
+    'set pause'
   );
   const wasmEvent = result.logs[0].events.find((e) => e.type === 'wasm');
   console.info(
@@ -33,9 +33,9 @@ console.log(process.argv)
 const args = process.argv.slice(2);
 console.log(args)
 if (args.length < 2) {
-  console.log('No arguments provided, need --can-mint');
-} else if (args.length == 2 && args[0] == '--can-mint') {
-  setMintable(args[1]);
+  console.log('No arguments provided, need --pause');
+} else if (args.length == 2 && args[0] == '--pause') {
+  setPause(args[1]);
 } else {
   console.log('Invalid arguments');
 }

@@ -134,10 +134,10 @@ export async function create_minter() {
   };
 
   // should be stars1nelx34qg6xtm5u748jzjsahthddsktrrg5dw2rx8vzpc8hwwgk5q32mj2h
-  console.log('vending factory addr: ', config.vendingFactory);
+  console.log('vending factory addr: ', config.pslabFactory);
 
   const paramsResponse = await client.queryContractSmart(
-    config.vendingFactory,
+    config.pslabFactory,
     {
       params: {},
     }
@@ -179,7 +179,7 @@ export async function create_minter() {
 
   const result = await client.execute(
     account,
-    config.vendingFactory,
+    config.pslabFactory,
     msg,
     'auto',
     config.name,

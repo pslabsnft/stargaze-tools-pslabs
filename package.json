@@ -50,8 +50,6 @@
     "upload-factory-minter": "ts-node devops/upload-factory-minter.ts",
     "init-factory": "ts-node devops/init-factory.ts",
     "set-new-uri": "ts-node scripts/set-new-uri.ts",
-    "query-internal": "ts-node scripts/query-internal.ts",
-
-    "set-mintable": "ts-node scripts/set-mintable.ts"
+    "set-pause": "ts-node scripts/set-pause.ts"
   }
 }
