@@ -82,8 +82,8 @@ async function testnet_init() {
 
   console.log('in testnet-launch config.account ', config.account);
   console.log(
-    'in testnet-launch config.pslabFactory ',
-    config.pslabFactory
+    'in testnet-launch config.serialPrintFactory ',
+    config.serialPrintFactory
   );
   const minterAddr = await create_minter();
   if (minterAddr == undefined) {
@@ -155,7 +155,7 @@ async function updateConfig(collectionConfig: any) {
   config.startTime = new Date(Date.now() + 10_000);
   config.tradingStartTime = new Date(Date.now() + 100_000);
   // add common vending factory address and sg721 base code id for collections
-  config.pslabFactory = FACTORY_ADDR;
+  config.serialPrintFactory = FACTORY_ADDR;
   config.sg721BaseCodeId = SG721_BASE_CODE_ID;
 }
 

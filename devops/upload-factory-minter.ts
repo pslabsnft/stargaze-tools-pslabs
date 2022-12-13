@@ -18,9 +18,9 @@ async function upload(contractPath: string) {
 
 async function uploadContracts() {
   console.log("uploading factory wasm");
-  await upload('./wasm/ps_lab_factory.wasm');
+  await upload('./wasm/serial_print_factory.wasm');
   
   console.log("uploading minter wasm");
-  await upload('./wasm/ps_lab_minter.wasm');
+  await upload('./wasm/serial_print_minter.wasm');
 }
 uploadContracts();

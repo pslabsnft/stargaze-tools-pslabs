@@ -9,8 +9,6 @@ import { isValidHttpUrl, toStars } from '../src/utils';
 
 const config = require('../config');
 
-const NEW_COLLECTION_FEE = coins('1000000000', 'ustars');
-
 function isValidIpfsUrl(uri: string) {
   let url;
 
@@ -134,10 +132,10 @@ export async function create_minter() {
   };
 
   // should be stars1nelx34qg6xtm5u748jzjsahthddsktrrg5dw2rx8vzpc8hwwgk5q32mj2h
-  console.log('vending factory addr: ', config.pslabFactory);
+  console.log('vending factory addr: ', config.serialPrintFactory);
 
   const paramsResponse = await client.queryContractSmart(
-    config.pslabFactory,
+    config.serialPrintFactory,
     {
       params: {},
     }
@@ -156,6 +154,9 @@ export async function create_minter() {
     tempMsg.create_minter.collection_params.info.royalty_info = null;
   }
   const msg = clean(tempMsg);
+
+  const creation_fee = parseInt(paramsResponse.params.extension.creation_fee_per_token) * config.numTokens;
+  const NEW_COLLECTION_FEE = coins(creation_fee, 'ustars');
 
   // Get confirmation before preceding
   console.log(
@@ -179,7 +180,7 @@ export async function create_minter() {
 
   const result = await client.execute(
     account,
-    config.pslabFactory,
+    config.serialPrintFactory,
     msg,
     'auto',
     config.name,
