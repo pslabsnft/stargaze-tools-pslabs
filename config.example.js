@@ -73,7 +73,7 @@ module.exports = {
   baseTokenUri:
     'ipfs://bafybeiaq3soaeiele2zx3n2qomksia352pooa5wbk5scnczzvucaqbad7m/galaxy4phyYu',
   // The number of tokens to mint
-  numTokens: 1000,
+  numTokens: 100,
   // The price (in STARS) for your NFTs (minimum 50 STARS)
   mintPrice: 5400,
   // The max amount of NFTs an address can mint
@@ -81,24 +81,24 @@ module.exports = {
   // The date when the sale goes live
   // If whitelist is enabled, only whitelisted addresses will be able to purchase
   // startTime in ISO format
-  startTime: '2022-12-03T06:00:00.000Z',
+  startTime: '2022-12-14T06:00:00.000Z',
   // The minter contract address
   // Get this after running `yarn minter`
-  minter: 'stars1lev4qkwml9347elh2g2vm509cvrj5h78x4ly7sfr9wy0674vx9vqf3kx85',
+  minter: 'stars1fvkthh77spthc4y25enu5r9lre8wd9k9vl3n9xdw0aaq7m6sewpswmd7c4',
   // SG721 contract address
   // Get this after running `yarn minter`
-  sg721: 'stars1rw9csxx0gdke9vs3vfrax3mwuc0ak2hjqkc3znpp4raxwjusrpksavkmvk',
+  sg721: 'stars1rg9k35euw6f6nat0cgxux2mqpvlyhk0hz5237hvp993zy9up88rqfq9kj9',
 
   //// CONTRACT CODE IDs: Double Double Testnet ////
   // The code ID for sg721_base
   sg721BaseCodeId: 274,
   // The code ID for vending_minter
-  vendingMinterCodeId: 603,
+  serialPrintMinterCodeId: 699,
   // The code ID for vending_factory contract
-  serialPrintFactoryCodeId: 602,
+  serialPrintFactoryCodeId: 698,
   // Addr for vending factory contract
   serialPrintFactory:
-    'stars1yvfjyq07hn92dufqlzcu4yz92gdyww7zr8pr2kr3wfgrcc97nqpseyhyue',
+    'stars1d0g9wvyacp52f59au7yyuy4dj3j0n9x0xky6wd2604xn54w5dz0qeymxr9',
   // The code ID for the whitelist contract
   whitelistCodeId: 277,
   // marketplace:
