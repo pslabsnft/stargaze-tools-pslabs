@@ -21,12 +21,12 @@ module.exports = {
   nftStorageEndpoint: 'https://api.nft.storage',
   // NFT.storage API key
   nftStorageApiKey:
-    '',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweEVBN2JDMDZEMzE0RUE2NDdlMGE3OTQ2OUE2YzUwZmFiODhENzdCNDUiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY0NDIwMzYyNTc4MiwibmFtZSI6IlNBTU5GVCJ9.otzi5G8BCGhtZKC3gKxkBujM9fA4iuHayc8Q4_3dHME',
   // Pinata API Key (optional)
-  pinataApiKey: '',
+  pinataApiKey: '10d510f11abd60be49a7',
   // Pinata Secret Key (optional)
   pinataSecretKey:
-    '',
+    '9990913d36fb68a2b840f7a2964eb210420e5968008338dacef633f2f2851a1b',
 
   //// COLLECTION INFO ////
   // The name of your collection
@@ -81,24 +81,24 @@ module.exports = {
   // The date when the sale goes live
   // If whitelist is enabled, only whitelisted addresses will be able to purchase
   // startTime in ISO format
-  startTime: '2022-12-14T06:00:00.000Z',
+  startTime: '2022-12-23T06:00:00.000Z',
   // The minter contract address
   // Get this after running `yarn minter`
-  minter: 'stars1fvkthh77spthc4y25enu5r9lre8wd9k9vl3n9xdw0aaq7m6sewpswmd7c4',
+  minter: 'stars1ehywnyflusrmcpn4g4e9aq5cud3qe04yalqgc0kuwmp8j9lfhz5qw0e5zp',
   // SG721 contract address
   // Get this after running `yarn minter`
-  sg721: 'stars1rg9k35euw6f6nat0cgxux2mqpvlyhk0hz5237hvp993zy9up88rqfq9kj9',
+  sg721: 'stars1v8xx8mzweqvpuuvp9k5rmx90jupfnsd78wwj5ckpv4e4knv53v6sv5drfu',
 
   //// CONTRACT CODE IDs: Double Double Testnet ////
   // The code ID for sg721_base
   sg721BaseCodeId: 274,
   // The code ID for vending_minter
-  serialPrintMinterCodeId: 699,
+  serialPrintMinterCodeId: 728,
   // The code ID for vending_factory contract
-  serialPrintFactoryCodeId: 698,
+  serialPrintFactoryCodeId: 727,
   // Addr for vending factory contract
   serialPrintFactory:
-    'stars1d0g9wvyacp52f59au7yyuy4dj3j0n9x0xky6wd2604xn54w5dz0qeymxr9',
+    'stars1hrfuuujh2wuv7gaevhxu8d299pdc398xh43vtxpkewlnk8z3x9kqlruc98',
   // The code ID for the whitelist contract
   whitelistCodeId: 277,
   // marketplace:
