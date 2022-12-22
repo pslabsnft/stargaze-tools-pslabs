@@ -21,9 +21,9 @@ export async function setNewUri(uri: string, numTokens: string) {
   );
   console.log(paramsResponse);
 
-  const creation_fee = parseInt(paramsResponse.params.extension.creation_fee_per_token) * parseInt(numTokens);
-  const NEW_COLLECTION_FEE = coins(creation_fee, 'ustars');
-  console.log(creation_fee)
+  // const creation_fee = parseInt(paramsResponse.params.extension.creation_fee_per_token) * parseInt(numTokens);
+  // const NEW_COLLECTION_FEE = coins(creation_fee, 'ustars');
+  // console.log(creation_fee)
 
   const result = await client.execute(
     config.account,
@@ -31,7 +31,8 @@ export async function setNewUri(uri: string, numTokens: string) {
     msg,
     'auto',
     'mint to',
-    NEW_COLLECTION_FEE
+    // NEW_COLLECTION_FEE
+    []
   );
   
   const wasmEvent = result.logs[0].events.find((e) => e.type === 'wasm');

@@ -155,7 +155,7 @@ export async function create_minter() {
   }
   const msg = clean(tempMsg);
 
-  const creation_fee = parseInt(paramsResponse.params.extension.creation_fee_per_token) * config.numTokens;
+  const creation_fee = parseInt(paramsResponse.params.creation_fee.amount);
   const NEW_COLLECTION_FEE = coins(creation_fee, 'ustars');
 
   // Get confirmation before preceding
